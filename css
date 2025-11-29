@@ -1,0 +1,204 @@
+/* ベースリセットとフォント設定 */
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; /* 優しい背景色 */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 基本構造 */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #008cba; /* 沖縄の海をイメージした青 */
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffd700; /* ハイライトカラー */
+}
+
+main {
+    padding: 20px 0;
+}
+
+/* セクションとカードデザイン */
+.card {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+    color: #008cba;
+    border-bottom: 3px solid #f9a825; /* アクセントカラー */
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.primary-section {
+    background-color: #e6f7ff; /* 翻訳セクションは目立つように */
+}
+
+/* ボタンデザイン */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.btn-primary {
+    background-color: #f9a825; /* 目立つアクションカラー */
+    color: white;
+    font-size: 1.1em;
+}
+
+.btn-primary:hover {
+    background-color: #e69100;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: #008cba;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #006b9a;
+}
+
+/* 翻訳エリア */
+.translation-area {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.preview-box, .result-box {
+    margin: 20px 0;
+    padding: 20px;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    color: #777;
+    background-color: #fff;
+}
+
+.result-box {
+    border: 2px solid #008cba;
+    font-weight: bold;
+    color: #333;
+    background-color: #fff;
+}
+
+/* おすすめ投稿リスト */
+.recommendations-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.recommendation-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+}
+
+.recommendation-item:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.recommendation-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.recommendation-item h3 {
+    color: #008cba;
+    margin: 10px 15px 5px;
+}
+
+.recommendation-item p {
+    margin: 0 15px 10px;
+    font-size: 0.95em;
+    color: #555;
+}
+
+.recommendation-item .tags {
+    font-size: 0.8em;
+    color: #f9a825;
+    margin: 0 15px 15px;
+    font-weight: bold;
+}
+
+/* 投稿フォーム */
+.post-form input[type="text"],
+.post-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box; /* paddingを含めて幅を計算 */
+    font-family: inherit;
+    font-size: 1em;
+}
+
+.post-form textarea {
+    resize: vertical;
+}
+
+.post-form button {
+    width: 100%;
+}
+
+/* フッター */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #ccc;
+    font-size: 0.85em;
+}
